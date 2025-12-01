@@ -6,14 +6,12 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left Side - Info */}
           <div>
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
-              Aplique Agora
-            </span>
+            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">Participe Agora</span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Faça Parte da{" "}
               <span className="text-primary">Família</span>
             </h2>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed text-left">Está procurando um lugar para chamar de lar em Ribeirão Preto? A República 12 Doses está com vagas abertas para 2026! Preencha o formulário ou entre em contato pelo WhatsApp/Instagram e viva os melhores anos da sua vida universitária.</p>
+            <p className="text-muted-foreground text-lg mb-8 leading-relaxed text-left">Passou na melhor Faculdade da América Latina e ainda esta perdido na busca de um lugar para chamar de lar em Ribeirão Preto? A República 12 Doses está com vagas abertas para 2026! Preencha o formulário ou entre em contato pelo WhatsApp/Instagram e viva os melhores anos da sua vida universitária.</p>
 
             {/* Contact Info */}
             <div className="space-y-4 mb-8">

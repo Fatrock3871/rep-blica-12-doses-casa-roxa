@@ -4,53 +4,40 @@ import { Button } from "@/components/ui/button";
 import carnadozeImg from "@/assets/carnadoze.jpg";
 import larBarImg from "@/assets/lar-bar.jpg";
 import diaZeroImg from "@/assets/dia-zero.jpg";
-
-const parties = [
-  {
-    id: 1,
-    name: "CarnaDoze",
-    tagline: "A Maior Micareta Universitária",
-    description:
-      "12 horas de Open Bar, trio elétrico, axé e muita energia. O evento mais esperado do ano que reúne milhares de universitários.",
-    image: carnadozeImg,
-    highlight: "12h de Open Bar",
-    icon: Music,
-  },
-  {
-    id: 2,
-    name: "Lar 12 Bar",
-    tagline: "Nossa Tradicional Festa no Quintal",
-    description:
-      "A festa mais intimista da 12 Doses. Música boa, drinks especiais e o clima acolhedor do nosso quintal transformado em bar.",
-    image: larBarImg,
-    highlight: "Ambiente Exclusivo",
-    icon: Calendar,
-  },
-  {
-    id: 3,
-    name: "Dia Zero",
-    tagline: "A Recepção Lendária dos Bixos",
-    description:
-      "O primeiro dia de aula merece ser memorável. Recebemos os calouros com toda energia e tradição que só a 12 Doses tem.",
-    image: diaZeroImg,
-    highlight: "Tradição Anual",
-    icon: Clock,
-  },
-];
-
+const parties = [{
+  id: 1,
+  name: "CarnaDoze",
+  tagline: "A Maior Micareta Universitária",
+  description: "12 horas de Open Bar, trio elétrico, axé e muita energia. O evento mais esperado do ano que reúne milhares de universitários.",
+  image: carnadozeImg,
+  highlight: "12h de Open Bar",
+  icon: Music
+}, {
+  id: 2,
+  name: "Lar 12 Bar",
+  tagline: "Nossa Tradicional Festa no Quintal",
+  description: "A festa mais intimista da 12 Doses. Música boa, drinks especiais e o clima acolhedor do nosso quintal transformado em bar.",
+  image: larBarImg,
+  highlight: "Ambiente Exclusivo",
+  icon: Calendar
+}, {
+  id: 3,
+  name: "Dia Zero",
+  tagline: "A Recepção Lendária dos Bixos",
+  description: "O primeiro dia de aula merece ser memorável. Recebemos os calouros com toda energia e tradição que só a 12 Doses tem.",
+  image: diaZeroImg,
+  highlight: "Tradição Anual",
+  icon: Clock
+}];
 const PartiesSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-
   const nextSlide = () => {
-    setActiveIndex((prev) => (prev + 1) % parties.length);
+    setActiveIndex(prev => (prev + 1) % parties.length);
   };
-
   const prevSlide = () => {
-    setActiveIndex((prev) => (prev - 1 + parties.length) % parties.length);
+    setActiveIndex(prev => (prev - 1 + parties.length) % parties.length);
   };
-
-  return (
-    <section id="festas" className="py-20 md:py-28 bg-muted overflow-hidden">
+  return <section id="festas" className="py-20 md:py-28 bg-muted overflow-hidden">
       <div className="container">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -61,9 +48,7 @@ const PartiesSection = () => {
             Eventos que Fazem{" "}
             <span className="text-primary">História</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            De micaretas épicas a festas intimistas, nossos eventos são referência na vida universitária de Ribeirão Preto.
-          </p>
+          <p className="text-muted-foreground max-w-2xl mx-auto">De micaretas épicas a festas, nossos eventos são referência na vida universitária de Ribeirão Preto.</p>
         </div>
 
         {/* Carousel */}
@@ -74,11 +59,7 @@ const PartiesSection = () => {
             <div className="relative order-2 lg:order-1">
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 to-primary/10 rounded-3xl blur-2xl opacity-50" />
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src={parties[activeIndex].image}
-                  alt={parties[activeIndex].name}
-                  className="w-full h-full object-cover transition-transform duration-500"
-                />
+                <img src={parties[activeIndex].image} alt={parties[activeIndex].name} className="w-full h-full object-cover transition-transform duration-500" />
                 {/* Overlay Badge */}
                 <div className="absolute top-4 left-4 px-4 py-2 rounded-full bg-primary text-primary-foreground font-semibold text-sm shadow-lg">
                   {parties[activeIndex].highlight}
@@ -91,9 +72,9 @@ const PartiesSection = () => {
               {/* Party Icon */}
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary-light flex items-center justify-center mb-6 shadow-lg">
                 {(() => {
-                  const Icon = parties[activeIndex].icon;
-                  return <Icon className="w-7 h-7 text-primary-foreground" />;
-                })()}
+                const Icon = parties[activeIndex].icon;
+                return <Icon className="w-7 h-7 text-primary-foreground" />;
+              })()}
               </div>
 
               <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
@@ -108,35 +89,16 @@ const PartiesSection = () => {
 
               {/* Navigation */}
               <div className="flex items-center gap-4">
-                <button
-                  onClick={prevSlide}
-                  className="w-12 h-12 rounded-full border-2 border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
-                  aria-label="Festa anterior"
-                >
+                <button onClick={prevSlide} className="w-12 h-12 rounded-full border-2 border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors" aria-label="Festa anterior">
                   <ChevronLeft className="w-5 h-5" />
                 </button>
-                <button
-                  onClick={nextSlide}
-                  className="w-12 h-12 rounded-full border-2 border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
-                  aria-label="Próxima festa"
-                >
+                <button onClick={nextSlide} className="w-12 h-12 rounded-full border-2 border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors" aria-label="Próxima festa">
                   <ChevronRight className="w-5 h-5" />
                 </button>
 
                 {/* Dots */}
                 <div className="flex gap-2 ml-4">
-                  {parties.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setActiveIndex(index)}
-                      className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                        index === activeIndex
-                          ? "w-8 bg-primary"
-                          : "bg-border hover:bg-primary/50"
-                      }`}
-                      aria-label={`Ir para festa ${index + 1}`}
-                    />
-                  ))}
+                  {parties.map((_, index) => <button key={index} onClick={() => setActiveIndex(index)} className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === activeIndex ? "w-8 bg-primary" : "bg-border hover:bg-primary/50"}`} aria-label={`Ir para festa ${index + 1}`} />)}
                 </div>
               </div>
             </div>
@@ -153,8 +115,6 @@ const PartiesSection = () => {
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default PartiesSection;

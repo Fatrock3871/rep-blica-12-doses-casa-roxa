@@ -11,7 +11,7 @@ const TourSection = () => {
             Entre e sinta a energia da{" "}
             <span className="text-primary">12 Doses</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">Conheça cada canto da nossa casa, desde da sala à beira da piscina conheça o cenário das suas próximas melhores memórias e descubra o que faz da 12 Doses uma família.</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto">Conheça cada canto da nossa casa, desde da sala à beira da piscina veja o cenário das suas próximas melhores memórias e descubra o que faz da 12 Doses uma família.</p>
         </div>
 
         {/* Video Container */}
