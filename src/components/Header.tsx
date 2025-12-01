@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logo12Doses from "@/assets/logo-12-doses.png";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,9 +32,11 @@ const Header = () => {
       <div className="container flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center border-primary shadow-sm">
-            <span className="text-primary-foreground font-display font-bold text-lg">12</span>
-          </div>
+          <img 
+            src={logo12Doses} 
+            alt="República 12 Doses" 
+            className="w-12 h-12 object-contain"
+          />
           <div className="hidden sm:block">
             <p className={`font-display font-bold text-lg leading-tight ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
               República

@@ -1,5 +1,6 @@
 import { Heart, Users, GraduationCap, Home } from "lucide-react";
 import familyBbq from "@/assets/family-bbq.jpg";
+import logo12Doses from "@/assets/logo-12-doses.png";
 
 const HistorySection = () => {
   const features = [
@@ -97,9 +98,11 @@ const HistorySection = () => {
             {/* Floating Card */}
             <div className="absolute -bottom-6 -left-6 bg-background rounded-xl shadow-xl p-5 border border-border max-w-xs animate-float">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center">
-                  <span className="text-primary-foreground font-display font-bold">12</span>
-                </div>
+                <img 
+                  src={logo12Doses} 
+                  alt="República 12 Doses" 
+                  className="w-12 h-12 object-contain"
+                />
                 <div>
                   <p className="font-semibold text-foreground">Califórnia Brasileira</p>
                   <p className="text-muted-foreground text-sm">USP Ribeirão Preto</p>
