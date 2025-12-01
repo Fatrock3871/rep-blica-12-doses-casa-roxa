@@ -19,7 +19,7 @@ const HeroSection = () => {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 backdrop-blur-sm mb-8 animate-fade-in">
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-primary-foreground/90 text-sm font-medium">#20ANOS12DOS</span>
+          <span className="text-primary-foreground/90 text-sm font-medium">#20ANOS12DOSES</span>
         </div>
 
         {/* Main Headline */}
