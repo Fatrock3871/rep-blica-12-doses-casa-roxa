@@ -1,9 +1,7 @@
 import ApplicationForm from "./ApplicationForm";
 import { MapPin, Phone, Instagram, Youtube } from "lucide-react";
-
 const ContactSection = () => {
-  return (
-    <section id="aplicar" className="py-20 md:py-28 bg-muted">
+  return <section id="aplicar" className="py-20 md:py-28 bg-muted">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left Side - Info */}
@@ -15,11 +13,7 @@ const ContactSection = () => {
               Faça Parte da{" "}
               <span className="text-primary">Família</span>
             </h2>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Está procurando um lugar para chamar de lar em Ribeirão Preto? 
-              A 12 Doses está com vagas abertas para 2026! Preencha o formulário 
-              e viva os melhores anos da sua vida universitária.
-            </p>
+            <p className="text-muted-foreground text-lg mb-8 leading-relaxed text-left">Está procurando um lugar para chamar de lar em Ribeirão Preto? A República 12 Doses está com vagas abertas para 2026! Preencha o formulário ou entre em contato pelo WhatsApp/Instagram e viva os melhores anos da sua vida universitária.</p>
 
             {/* Contact Info */}
             <div className="space-y-4 mb-8">
@@ -40,12 +34,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-medium text-foreground">WhatsApp</p>
-                  <a
-                    href="https://wa.me/5516974071720"
-                    className="text-primary hover:underline text-sm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href="https://wa.me/5516974071720" className="text-primary hover:underline text-sm" target="_blank" rel="noopener noreferrer">
                     +55 (16) 97407-1720
                   </a>
                 </div>
@@ -54,22 +43,10 @@ const ContactSection = () => {
 
             {/* Social Links */}
             <div className="flex gap-3">
-              <a
-                href="https://www.instagram.com/rep12doses"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-xl bg-background border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
-                aria-label="Instagram"
-              >
+              <a href="https://www.instagram.com/rep12doses" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-background border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors" aria-label="Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a
-                href="https://www.youtube.com/channel/UCVTwBqWihgTqBYRTUR-bUBQ"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-xl bg-background border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
-                aria-label="YouTube"
-              >
+              <a href="https://www.youtube.com/channel/UCVTwBqWihgTqBYRTUR-bUBQ" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-background border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors" aria-label="YouTube">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
@@ -84,8 +61,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
