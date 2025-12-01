@@ -1,4 +1,5 @@
 import { Instagram, Youtube, MapPin, Heart } from "lucide-react";
+import logo12Doses from "@/assets/logo-12-doses.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,9 +20,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-bold text-lg">12</span>
-              </div>
+              <img src={logo12Doses} alt="República 12 Doses" className="w-12 h-12 object-contain" />
               <div>
                 <p className="font-display font-bold text-lg leading-tight">República</p>
                 <p className="font-display font-bold text-lg leading-tight text-primary-glow">12 Doses</p>
