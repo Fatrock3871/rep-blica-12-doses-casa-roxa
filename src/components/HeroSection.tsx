@@ -1,18 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-
 const HeroSection = () => {
-  return (
-    <section
-      id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-    >
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      />
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${heroBg})`
+    }} />
       
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[hsla(263,84%,10%,0.7)] via-[hsla(263,84%,8%,0.8)] to-[hsla(263,84%,5%,0.95)]" />
@@ -25,9 +19,7 @@ const HeroSection = () => {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 backdrop-blur-sm mb-8 animate-fade-in">
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-primary-foreground/90 text-sm font-medium">
-            #20anos de tradição
-          </span>
+          <span className="text-primary-foreground/90 text-sm font-medium">#20ANOS12DOS</span>
         </div>
 
         {/* Main Headline */}
@@ -59,14 +51,9 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <a
-        href="#tour"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-primary-foreground/60 hover:text-primary-foreground transition-colors animate-float"
-      >
+      <a href="#tour" className="absolute bottom-8 left-1/2 -translate-x-1/2 text-primary-foreground/60 hover:text-primary-foreground transition-colors animate-float">
         <ChevronDown size={32} />
       </a>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
