@@ -32,11 +32,7 @@ const Header = () => {
       <div className="container flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-3">
-          <img 
-            src={logo12Doses} 
-            alt="República 12 Doses" 
-            className="w-12 h-12 object-contain"
-          />
+          <img src={logo12Doses} alt="República 12 Doses" className="w-12 h-12 object-contain" />
           <div className="hidden sm:block">
             <p className={`font-display font-bold text-lg leading-tight ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
               República
@@ -57,7 +53,7 @@ const Header = () => {
         {/* CTA Button */}
         <div className="hidden lg:block">
           <Button variant="hero" size="lg" asChild>
-            <a href="#aplicar">Aplicar para Vaga</a>
+            <a href="#aplicar">Temos Vagas</a>
           </Button>
         </div>
 
