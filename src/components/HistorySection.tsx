@@ -8,7 +8,7 @@ const HistorySection = () => {
       icon: GraduationCap,
       title: "Diversidade de Cursos",
       description:
-        "Começamos na FEA, mas hoje abrigamos estudantes de Direito, Economia, Psicologia, Odontologia, Educação Física e muito mais.",
+        "Começamos na FEA, mas hoje abrigamos estudantes de Direito, Economia, Psicologia, Odontologia, Educação Física, Medicina, Nutrição e muito mais.",
     },
     {
       icon: Users,
@@ -20,21 +20,21 @@ const HistorySection = () => {
       icon: Home,
       title: "Tradição Histórica",
       description:
-        "Uma das repúblicas mais antigas da Califórnia Brasileira, levamos tradições que integram e unem gerações.",
+        "Uma das Repúblicas mais antigas de Ribeirão Preto. Aqui mantemos vivas as tradições que integram a casa e unem as gerações.",
     },
     {
       icon: Heart,
       title: "Família Longe de Casa",
       description:
-        "Mais do que colegas, somos irmãos. Aqui você encontra apoio, amizade e memórias para toda a vida.",
+        "Aqui, estranhos viram irmãos. Um lar feito de apoio real e amizades leais, onde construímos juntos as melhores memórias da sua vida.",
     },
   ];
 
   return (
     <section id="historia" className="py-20 md:py-28 bg-background overflow-hidden">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left Content */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          {/* Left Content - Manifesto */}
           <div>
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
               Nossa História
@@ -43,12 +43,25 @@ const HistorySection = () => {
               Uma Família de{" "}
               <span className="text-primary">20 Anos</span>
             </h2>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Somos uma tradicional república universitária localizada em Ribeirão Preto, 
-              São Paulo. Com quase 20 anos de história, buscamos promover integração, 
-              amizade e diversão entre os universitários da USP. Aqui, a diferença 
-              entre o veneno e o remédio é realmente a dose.
-            </p>
+            
+            {/* Manifesto */}
+            <div className="text-muted-foreground text-base md:text-lg leading-relaxed space-y-4 mb-8">
+              <p>
+                Tudo começou em 2005, quando quatro amigos da universidade decidiram dividir uma casa. A ideia não era criar uma república, mas um espaço para viver, rir e aproveitar a vida universitária. O tempo passou, a casa virou o embrião de uma Família Roxa e, duas décadas depois, aquele endereço se transformou em um lar de tradição e integração.
+              </p>
+              <p className="font-semibold text-foreground">
+                Mas, afinal, o que é morar na 12 Doses?
+              </p>
+              <p>
+                Somos suspeitos para falar, mas acreditamos que é a melhor escolha da sua faculdade. Viver com mais de 20 pessoas que você não conhece pode parecer desafiador no início, mas a mágica acontece quando esses estranhos se tornam sua família longe de casa.
+              </p>
+              <p>
+                Aqui, a história se renova a cada dia. Desde a ajuda nas matérias da faculdade até a parceria nas festas; de ver um filme na sala a curtir uma piscininha com churrasco. Todo momento vira resenha. É um "caos organizado" onde, entre inovações e tradições, você encontra apoio para dividir seus quatro ou cinco anos de graduação.
+              </p>
+              <p className="font-medium text-primary">
+                Na 12 Doses, mais do que morar, a gente constrói memórias. #MoreEmRep #12Doses
+              </p>
+            </div>
 
             {/* Features Grid */}
             <div className="grid sm:grid-cols-2 gap-6">
@@ -77,13 +90,15 @@ const HistorySection = () => {
             <div className="absolute -top-10 -right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
             <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
 
-            {/* Main Image */}
+            {/* Main Image Placeholder */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src={familyBbq}
-                alt="Churrasco das Famílias - Integração total entre pais e moradores"
-                className="w-full h-auto object-cover"
-              />
+              <div className="aspect-[4/3] bg-muted flex items-center justify-center">
+                <img
+                  src={familyBbq}
+                  alt="Churrasco das Famílias - Integração total entre pais e moradores"
+                  className="w-full h-full object-cover"
+                />
+              </div>
               {/* Image Overlay Caption */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/90 to-transparent p-6">
                 <p className="text-primary-foreground font-medium">
@@ -98,9 +113,9 @@ const HistorySection = () => {
             {/* Floating Card */}
             <div className="absolute -bottom-6 -left-6 bg-background rounded-xl shadow-xl p-5 border border-border max-w-xs animate-float">
               <div className="flex items-center gap-3">
-                <img 
-                  src={logo12Doses} 
-                  alt="República 12 Doses" 
+                <img
+                  src={logo12Doses}
+                  alt="República 12 Doses"
                   className="w-12 h-12 object-contain"
                 />
                 <div>
