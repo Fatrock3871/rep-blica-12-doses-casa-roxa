@@ -53,7 +53,7 @@ const Header = () => {
         {/* CTA Button */}
         <div className="hidden lg:block">
           <Button variant="hero" size="lg" asChild>
-            <a href="#aplicar">Temos Vagas</a>
+            <a href="#aplicar"> Seja um 12 Doses</a>
           </Button>
         </div>
 
