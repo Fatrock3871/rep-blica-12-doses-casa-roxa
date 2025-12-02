@@ -1,37 +1,25 @@
 import { Heart, Users, GraduationCap, Home } from "lucide-react";
 import familyBbq from "@/assets/family-bbq.jpg";
 import logo12Doses from "@/assets/logo-12-doses.png";
-
 const HistorySection = () => {
-  const features = [
-    {
-      icon: GraduationCap,
-      title: "Diversidade de Cursos",
-      description:
-        "Começamos na FEA, mas hoje abrigamos estudantes de Direito, Economia, Psicologia, Odontologia, Educação Física, Medicina, Nutrição e muito mais.",
-    },
-    {
-      icon: Users,
-      title: "Organização de Eventos",
-      description:
-        "Aprendemos organização, negociação e marketing criando eventos memoráveis que marcam a vida universitária de Ribeirão.",
-    },
-    {
-      icon: Home,
-      title: "Tradição Histórica",
-      description:
-        "Uma das Repúblicas mais antigas de Ribeirão Preto. Aqui mantemos vivas as tradições que integram a casa e unem as gerações.",
-    },
-    {
-      icon: Heart,
-      title: "Família Longe de Casa",
-      description:
-        "Aqui, estranhos viram irmãos. Um lar feito de apoio real e amizades leais, onde construímos juntos as melhores memórias da sua vida.",
-    },
-  ];
-
-  return (
-    <section id="historia" className="py-20 md:py-28 bg-background overflow-hidden">
+  const features = [{
+    icon: GraduationCap,
+    title: "Diversidade de Cursos",
+    description: "Começamos na FEA, mas hoje abrigamos estudantes de Direito, Economia, Psicologia, Odontologia, Educação Física, Medicina, Nutrição e muito mais."
+  }, {
+    icon: Users,
+    title: "Organização de Eventos",
+    description: "Aprendemos organização, negociação e marketing criando eventos memoráveis que marcam a vida universitária de Ribeirão."
+  }, {
+    icon: Home,
+    title: "Tradição Histórica",
+    description: "Uma das Repúblicas mais antigas de Ribeirão Preto. Aqui mantemos vivas as tradições que integram a casa e unem as gerações."
+  }, {
+    icon: Heart,
+    title: "Família Longe de Casa",
+    description: "Aqui, estranhos viram irmãos. Um lar feito de apoio real e amizades leais, onde construímos juntos as melhores memórias da sua vida."
+  }];
+  return <section id="historia" className="py-20 md:py-28 bg-background overflow-hidden">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left Content - Manifesto */}
@@ -65,11 +53,7 @@ const HistorySection = () => {
 
             {/* Features Grid */}
             <div className="grid sm:grid-cols-2 gap-6">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="group p-5 rounded-xl bg-muted/50 border border-transparent hover:border-primary/20 hover:bg-accent/50 transition-all duration-300"
-                >
+              {features.map((feature, index) => <div key={index} className="group p-5 rounded-xl bg-muted/50 border border-transparent hover:border-primary/20 hover:bg-accent/50 transition-all duration-300">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                     <feature.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
                   </div>
@@ -79,8 +63,7 @@ const HistorySection = () => {
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {feature.description}
                   </p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
 
@@ -93,11 +76,7 @@ const HistorySection = () => {
             {/* Main Image Placeholder */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <div className="aspect-[4/3] bg-muted flex items-center justify-center">
-                <img
-                  src={familyBbq}
-                  alt="Churrasco das Famílias - Integração total entre pais e moradores"
-                  className="w-full h-full object-cover"
-                />
+                <img alt="Churrasco das Famílias - Integração total entre pais e moradores" className="w-full h-full object-cover" src="/lovable-uploads/7f29600c-93fa-42e3-9b5e-a253d50bd496.jpg" />
               </div>
               {/* Image Overlay Caption */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/90 to-transparent p-6">
@@ -113,11 +92,7 @@ const HistorySection = () => {
             {/* Floating Card */}
             <div className="absolute -bottom-6 -left-6 bg-background rounded-xl shadow-xl p-5 border border-border max-w-xs animate-float">
               <div className="flex items-center gap-3">
-                <img
-                  src={logo12Doses}
-                  alt="República 12 Doses"
-                  className="w-12 h-12 object-contain"
-                />
+                <img src={logo12Doses} alt="República 12 Doses" className="w-12 h-12 object-contain" />
                 <div>
                   <p className="font-semibold text-foreground">Califórnia Brasileira</p>
                   <p className="text-muted-foreground text-sm">USP Ribeirão Preto</p>
@@ -127,8 +102,6 @@ const HistorySection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HistorySection;
