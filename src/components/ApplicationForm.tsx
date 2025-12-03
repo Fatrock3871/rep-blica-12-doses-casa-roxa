@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Send, CheckCircle } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const ApplicationForm = () => {
   const { toast } = useToast();
@@ -24,15 +25,55 @@ const ApplicationForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      // 1. Save to Supabase
+      const { error: dbError } = await supabase
+        .from("applications")
+        .insert({
+          name: formData.name,
+          course: formData.course,
+          city: formData.city,
+          phone: formData.phone,
+        });
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    toast({
-      title: "Inscrição enviada!",
-      description: "Em breve um morador entrará em contato com você.",
-    });
+      if (dbError) {
+        console.error("Database error:", dbError);
+        throw new Error("Erro ao salvar inscrição");
+      }
+
+      // 2. Send email notification
+      const { error: emailError } = await supabase.functions.invoke(
+        "send-application-notification",
+        {
+          body: {
+            name: formData.name,
+            course: formData.course,
+            city: formData.city,
+            phone: formData.phone,
+          },
+        }
+      );
+
+      if (emailError) {
+        console.error("Email error:", emailError);
+        // Don't throw - application was saved, just email failed
+      }
+
+      setIsSubmitted(true);
+      toast({
+        title: "Inscrição enviada!",
+        description: "Em breve um morador entrará em contato com você.",
+      });
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Erro ao enviar",
+        description: "Tente novamente ou entre em contato pelo WhatsApp.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -68,6 +109,7 @@ const ApplicationForm = () => {
             onChange={handleChange}
             placeholder="Seu nome"
             required
+            maxLength={100}
             className="h-12 bg-background border-border focus:border-primary"
           />
         </div>
@@ -82,6 +124,7 @@ const ApplicationForm = () => {
             onChange={handleChange}
             placeholder="Ex: Administração"
             required
+            maxLength={100}
             className="h-12 bg-background border-border focus:border-primary"
           />
         </div>
@@ -98,6 +141,7 @@ const ApplicationForm = () => {
             onChange={handleChange}
             placeholder="De onde você vem?"
             required
+            maxLength={100}
             className="h-12 bg-background border-border focus:border-primary"
           />
         </div>
@@ -112,6 +156,7 @@ const ApplicationForm = () => {
             onChange={handleChange}
             placeholder="(00) 00000-0000"
             required
+            maxLength={20}
             className="h-12 bg-background border-border focus:border-primary"
           />
         </div>

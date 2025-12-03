@@ -67,13 +67,13 @@ const HistorySection = () => {
             </div>
           </div>
 
-          {/* Right Image */}
-          <div className="relative">
+          {/* Right Images */}
+          <div className="relative space-y-6">
             {/* Decorative Background */}
             <div className="absolute -top-10 -right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
             <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
 
-            {/* Main Image Placeholder */}
+            {/* Main Image - Churrasco das Famílias */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <div className="aspect-[4/3] bg-muted flex items-center justify-center">
                 <img alt="Churrasco das Famílias - Integração total entre pais e moradores" className="w-full h-full object-cover" src="/lovable-uploads/7f29600c-93fa-42e3-9b5e-a253d50bd496.jpg" />
@@ -89,8 +89,27 @@ const HistorySection = () => {
               </div>
             </div>
 
+            {/* Second Image - Churrasco de Ex-Moradores */}
+            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <div className="aspect-[16/9] bg-muted flex items-center justify-center">
+                {/* Placeholder for ex-moradores image */}
+                <div className="w-full h-full bg-gradient-to-br from-primary/5 to-primary/20 flex items-center justify-center">
+                  <span className="text-primary/40 text-sm">Foto em breve</span>
+                </div>
+              </div>
+              {/* Image Overlay Caption */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/90 to-transparent p-4">
+                <p className="text-primary-foreground font-medium text-sm">
+                  🎉 Churrasco de Ex-Moradores
+                </p>
+                <p className="text-primary-foreground/70 text-xs">
+                  O retorno de quem fez história
+                </p>
+              </div>
+            </div>
+
             {/* Floating Card */}
-            <div className="absolute -bottom-6 -left-6 bg-background rounded-xl shadow-xl p-5 border border-border max-w-xs animate-float">
+            <div className="absolute top-1/3 -left-6 bg-background rounded-xl shadow-xl p-5 border border-border max-w-xs animate-float z-10">
               <div className="flex items-center gap-3">
                 <img src={logo12Doses} alt="República 12 Doses" className="w-12 h-12 object-contain" />
                 <div>

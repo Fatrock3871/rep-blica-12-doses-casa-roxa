@@ -27,9 +27,9 @@ const faqs = [
       "Na 12 Doses temos uma filosofia de integração, não de humilhação. Nosso lema é: rimos COM você, não DE você. Todas as atividades são pensadas para criar laços de amizade e fazer você se sentir parte da família desde o primeiro dia. Violência e constrangimento não têm espaço aqui.",
   },
   {
-    question: "Qual a distância da república para a faculdade?",
+    question: "A República 12 Doses fica longe da faculdade?",
     answer:
-      "Somos literalmente vizinhos de muro do campus da USP! A 12 Doses fica no Parque Residencial Cidade Universitária, a poucos metros da entrada. Você pode ir a pé em menos de 5 minutos ou de bicicleta em 2. É a localização perfeita para quem quer praticidade sem abrir mão de privacidade.",
+      "Somos literalmente vizinhos de muro do campus da USP! A 12 Doses fica no Parque Residencial Cidade Universitária, a poucos metros da entrada. Você pode ir a pé em menos de 5 minutos ou de bicicleta em 2. É a localização perfeita para quem quer praticidade sem abrir mão de privacidade. Além disso, estamos localizados a menos de 1km do Bandejão Central, facilitando muito a rotina de almoço e jantar no campus.",
   },
 ];
 
