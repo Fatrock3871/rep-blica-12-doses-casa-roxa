@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import carnadozeImg from "@/assets/carnadoze.jpg";
 import larBarImg from "@/assets/lar-bar.jpg";
 import diaZeroImg from "@/assets/dia-zero.jpg";
+import arraiaImg from "@/assets/arraia-da-12.jpg";
 
 const parties = [
   {
@@ -42,7 +43,7 @@ const parties = [
     tagline: "A Melhor Tradição Junina",
     description:
       "Comidas típicas, fogueira e a melhor tradição junina na Casa Roxa. Quadrilha, quentão e muito forró para celebrar São João.",
-    image: null,
+    image: arraiaImg,
     highlight: "Festa Junina",
     icon: Flame,
   },
