@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
-
 const TourSection = () => {
-  return (
-    <section id="tour" className="py-20 md:py-28 bg-muted">
+  return <section id="tour" className="py-20 md:py-28 bg-muted">
       <div className="container">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -26,13 +24,7 @@ const TourSection = () => {
           {/* Video Wrapper */}
           <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-foreground/5 border border-border">
             <div className="aspect-video">
-              <iframe
-                src="https://www.youtube.com/embed/rOENTqFANLg"
-                title="Tour Virtual República 12 Doses"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
+              <iframe src="https://www.youtube.com/embed/rOENTqFANLg" title="Tour Virtual República 12 Doses" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full" />
             </div>
           </div>
 
@@ -44,40 +36,36 @@ const TourSection = () => {
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
-          {[
-            { value: "20", label: "Anos de História" },
-            { value: "+204", label: "Ex-moradores" },
-            { value: "12+", label: "Cursos Diferentes" },
-            { value: "100%", label: "Família" },
-          ].map((stat, index) => (
-            <div
-              key={index}
-              className="text-center p-6 rounded-2xl bg-background shadow-lg border border-border hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-            >
+          {[{
+          value: "20",
+          label: "Anos de História"
+        }, {
+          value: "+204",
+          label: "Ex-moradores"
+        }, {
+          value: "12+",
+          label: "Cursos Diferentes"
+        }, {
+          value: "100%",
+          label: "Família"
+        }].map((stat, index) => <div key={index} className="text-center p-6 rounded-2xl bg-background shadow-lg border border-border hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <p className="font-display text-3xl md:text-4xl font-bold text-primary mb-1">
                 {stat.value}
               </p>
               <p className="text-muted-foreground text-sm">{stat.label}</p>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         {/* Aftermovie CTA */}
         <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-4">Quer ver a energia das nossas festas?</p>
+          <p className="text-muted-foreground mb-4">Quer ver um pouquinho da energia das nossas festas?</p>
           <Button variant="outline" size="lg" asChild>
-            <a
-              href="https://youtu.be/QhNWAyakB4k?si=VWrVephSw6qz-JGw&t=1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://youtu.be/QhNWAyakB4k?si=VWrVephSw6qz-JGw&t=1" target="_blank" rel="noopener noreferrer">
               Aftermovie 2024
             </a>
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TourSection;

@@ -43,9 +43,7 @@ const HistorySection = () => {
               <p>
                 Somos suspeitos para falar, mas acreditamos que é a melhor escolha da sua faculdade. Viver com mais de 20 pessoas que você não conhece pode parecer desafiador no início, mas a mágica acontece quando esses estranhos se tornam sua família longe de casa.
               </p>
-              <p>
-                Aqui, a história se renova a cada dia. Desde a ajuda nas matérias da faculdade até a parceria nas festas; de ver um filme na sala a curtir uma piscininha com churrasco. Todo momento vira resenha. É um "caos organizado" onde, entre inovações e tradições, você encontra apoio para dividir seus quatro ou cinco anos de graduação.
-              </p>
+              <p>Aqui, a história se renova a cada dia. Desde a ajuda nas matérias da faculdade até a parceria nas festas; de ver um filme na sala a curtir uma piscininha com churrasco. Todo momento vira resenha. É onde, entre inovações e tradições, você encontra apoio para dividir seus quatro ou cinco anos de graduação.</p>
               <p className="font-medium text-primary">
                 Na 12 Doses, mais do que morar, a gente constrói memórias. #MoreEmRep #12Doses
               </p>
