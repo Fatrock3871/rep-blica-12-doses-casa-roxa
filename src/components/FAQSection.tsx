@@ -7,6 +7,11 @@ import {
 
 const faqs = [
   {
+    question: "Por que 12 Doses?",
+    answer:
+      "Para falarmos a verdade, nem a gente sabe muito. Nossos ex moradores falam histórias diferentes cada vez que vemos eles, mas fingimos acreditar porque agora o nome já pegou. Brincadeiras a parte, achamos que 12 é um número cabalístico, o ano tem 12 meses, o relógio tem 12 números, um pacote de cerveja tem 12 latas, 12 símbolos do zodíaco, 12 discípulos de Jesus, uma dúzia é 12. Ou seja, no final tudo é DOZE.",
+  },
+  {
     question: "Existe intercâmbio com bolsa na USP?",
     answer:
       "Sim! A USP oferece diversas oportunidades de intercâmbio com bolsas de estudo através de programas como FAPESP, CNPq e convênios internacionais. Muitos dos nossos moradores já fizeram intercâmbio para países como Estados Unidos, França, Alemanha e Canadá durante a graduação.",
