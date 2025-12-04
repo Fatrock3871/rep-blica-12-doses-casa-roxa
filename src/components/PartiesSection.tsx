@@ -12,7 +12,7 @@ const parties = [
     name: "CarnaDoze",
     tagline: "A Maior Micareta Universitária",
     description:
-      "12 horas de Open Bar, trio elétrico, axé e muita energia. O evento mais esperado do ano que reúne milhares de universitários.",
+      "Prepare-se para 12 HORAS de OPEN BAR e as melhores atrações no MAIOR CARNAVAL FORA DE ÉPOCA de SP!",
     image: carnadozeImg,
     highlight: "12h de Open Bar",
     icon: Music,
@@ -22,7 +22,7 @@ const parties = [
     name: "Lar 12 Bar",
     tagline: "Nossa Tradicional Festa no Quintal",
     description:
-      "A festa mais intimista da 12 Doses. Música boa, drinks especiais e o clima acolhedor do nosso quintal transformado em bar.",
+      "No sábado recebemos todos no quintal da nossa casa roxa para o melhor Open food do semestre! 🤩",
     image: larBarImg,
     highlight: "Ambiente Exclusivo",
     icon: Calendar,
