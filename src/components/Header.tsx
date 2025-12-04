@@ -25,14 +25,14 @@ const Header = () => {
     href: "#festas",
     label: "Festas"
   }, {
+    href: "#manual",
+    label: "Manual dos Bixos"
+  }, {
     href: "#depoimentos",
     label: "Depoimentos"
   }, {
     href: "#faq",
     label: "FAQ"
-  }, {
-    href: "#manual",
-    label: "Manual dos Bixos"
   }];
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg py-3" : "bg-transparent py-5"}`}>
       <div className="container flex items-center justify-between">
