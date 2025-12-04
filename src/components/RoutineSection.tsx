@@ -5,7 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { BookOpen, Heart, Trophy, Dumbbell } from "lucide-react";
+import { BookOpen, Heart, Trophy, Dumbbell, HandHeart } from "lucide-react";
 
 const routineItems = [
   {
@@ -30,6 +30,12 @@ const routineItems = [
     icon: Dumbbell,
     title: "Preparação",
     description: "Treino forte para corpo e mente.",
+    image: null,
+  },
+  {
+    icon: HandHeart,
+    title: "Impacto Social",
+    description: "Devolvendo para a comunidade. Campanhas de doação de sangue, alimentos e ações sociais que fazemos durante o ano.",
     image: null,
   },
 ];
