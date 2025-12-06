@@ -50,7 +50,7 @@ const Header = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-10">
           {navLinks.map(link => <a key={link.href} href={link.href} className={`font-medium transition-colors hover:text-primary ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
               {link.label}
             </a>)}
