@@ -35,23 +35,15 @@ const Header = () => {
     label: "FAQ"
   }];
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg py-3" : "bg-transparent py-5"}`}>
-      <div className="container flex items-center justify-between">
-        {/* Logo */}
-        <a href="#home" className="flex items-center gap-3">
+      <div className="container max-w-7xl mx-auto px-4 flex items-center justify-between">
+        {/* Logo - apenas ícone no desktop */}
+        <a href="#home" className="flex items-center">
           <img src={logo12Doses} alt="República 12 Doses" className="w-12 h-12 object-contain" />
-          <div className="hidden sm:block">
-            <p className={`font-display font-bold text-lg leading-tight ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
-              República
-            </p>
-            <p className={`font-display font-bold text-lg leading-tight ${isScrolled ? "text-primary" : "text-primary-foreground"}`}>
-              12 Doses
-            </p>
-          </div>
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-10">
-          {navLinks.map(link => <a key={link.href} href={link.href} className={`font-medium transition-colors hover:text-primary ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
+        <nav className="hidden lg:flex items-center gap-6">
+          {navLinks.map(link => <a key={link.href} href={link.href} className={`text-sm font-semibold transition-colors hover:text-primary ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
               {link.label}
             </a>)}
         </nav>
