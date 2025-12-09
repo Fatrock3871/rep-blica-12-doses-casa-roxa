@@ -6,6 +6,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { BookOpen, Heart, Trophy, Dumbbell, HandHeart } from "lucide-react";
+import interrepsImage from "@/assets/interreps.jpg";
 
 const routineItems = [
   {
@@ -24,7 +25,7 @@ const routineItems = [
     icon: Trophy,
     title: "A Paixão",
     description: "Inter-Reps: A raça dentro de quadra.",
-    image: null,
+    image: interrepsImage,
   },
   {
     icon: Dumbbell,
