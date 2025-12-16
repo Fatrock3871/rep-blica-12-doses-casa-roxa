@@ -29,7 +29,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "12 Doses <onboarding@resend.dev>",
-      to: ["republica12doses@gmail.com"],
+      to: ["pietrooliveiramarquespp@usp.br"],
       subject: `Nova Inscrição - ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
