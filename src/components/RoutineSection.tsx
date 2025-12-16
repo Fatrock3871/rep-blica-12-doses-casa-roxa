@@ -24,7 +24,7 @@ const routineItems = [
   {
     icon: Trophy,
     title: "Interreps",
-    description: "Inter-Reps: A raça dentro de quadra.",
+    description: "Jogos entre Repúblicas",
     image: interrepsImage,
   },
   {
