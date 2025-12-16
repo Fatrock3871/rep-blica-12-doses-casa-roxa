@@ -23,7 +23,7 @@ const routineItems = [
   },
   {
     icon: Trophy,
-    title: "A Paixão",
+    title: "Interreps",
     description: "Inter-Reps: A raça dentro de quadra.",
     image: interrepsImage,
   },
