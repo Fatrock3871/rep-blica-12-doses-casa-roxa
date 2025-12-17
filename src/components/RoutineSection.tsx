@@ -5,22 +5,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { BookOpen, Heart, Trophy, Dumbbell, HandHeart } from "lucide-react";
+import { Heart, Trophy, HandHeart } from "lucide-react";
 import interrepsImage from "@/assets/interreps.jpg";
 import doacaoHemocentro from "@/assets/doacao-hemocentro.jpg";
 
 const routineItems = [
   {
-    icon: BookOpen,
-    title: "Foco Acadêmico",
-    description: "Foco nos estudos e suporte acadêmico.",
-    image: null,
-  },
-  {
-    icon: Heart,
-    title: "Vida Saudável",
-    description: "Saúde em dia no CEFER.",
-    image: null,
+    icon: HandHeart,
+    title: "Ações Sociais",
+    description: "Devolvendo para a comunidade. Campanhas de doação de sangue, alimentos e ações sociais.",
+    image: doacaoHemocentro,
   },
   {
     icon: Trophy,
@@ -29,16 +23,16 @@ const routineItems = [
     image: interrepsImage,
   },
   {
-    icon: Dumbbell,
-    title: "Preparação",
-    description: "Treino forte para corpo e mente.",
+    icon: Heart,
+    title: "Vida Saudável",
+    description: "Saúde em dia no CEFER.",
     image: null,
   },
   {
-    icon: HandHeart,
-    title: "Impacto Social",
-    description: "Devolvendo para a comunidade. Campanhas de doação de sangue, alimentos e ações sociais que fazemos durante o ano.",
-    image: doacaoHemocentro,
+    icon: Heart,
+    title: "Aguentar a fofura da Ressaca",
+    description: "O mascote da rep que conquista todo mundo.",
+    image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80",
   },
 ];
 
