@@ -19,7 +19,7 @@ const ApplicationForm = () => {
       className="space-y-6"
     >
       {/* Campo oculto para redirecionamento após envio */}
-      <input type="hidden" name="_next" value="https://seusite.com.br/obrigado" />
+      <input type="hidden" name="_next" value="https://12doses.lovable.app/obrigado" />
       
       <div className="grid sm:grid-cols-2 gap-6">
         <div className="space-y-2">
