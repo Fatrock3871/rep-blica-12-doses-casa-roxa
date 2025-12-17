@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/carousel";
 import { BookOpen, Heart, Trophy, Dumbbell, HandHeart } from "lucide-react";
 import interrepsImage from "@/assets/interreps.jpg";
+import doacaoHemocentro from "@/assets/doacao-hemocentro.jpg";
 
 const routineItems = [
   {
@@ -37,7 +38,7 @@ const routineItems = [
     icon: HandHeart,
     title: "Impacto Social",
     description: "Devolvendo para a comunidade. Campanhas de doação de sangue, alimentos e ações sociais que fazemos durante o ano.",
-    image: null,
+    image: doacaoHemocentro,
   },
 ];
 
