@@ -13,7 +13,7 @@ const ApplicationForm = () => {
 
   return (
     <form 
-      action="SEU_LINK_DO_FORMSPREE_AQUI" 
+      action="https://formspree.io/f/mldqqewa" 
       method="POST"
       onSubmit={handleSubmit}
       className="space-y-6"
