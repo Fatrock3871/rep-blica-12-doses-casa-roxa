@@ -1,6 +1,7 @@
 import { Heart, Users, GraduationCap, Home } from "lucide-react";
 import familyBbq from "@/assets/family-bbq.jpg";
 import logo12Doses from "@/assets/logo-12-doses.png";
+import exMoradores from "@/assets/ex-moradores.jpg";
 const HistorySection = () => {
   const features = [{
     icon: GraduationCap,
@@ -90,10 +91,11 @@ const HistorySection = () => {
             {/* Second Image - Churrasco de Ex-Moradores */}
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <div className="aspect-[16/9] bg-muted flex items-center justify-center">
-                {/* Placeholder for ex-moradores image */}
-                <div className="w-full h-full bg-gradient-to-br from-primary/5 to-primary/20 flex items-center justify-center">
-                  <span className="text-primary/40 text-sm">Foto em breve</span>
-                </div>
+                <img 
+                  src={exMoradores} 
+                  alt="Churrasco de Ex-Moradores - O retorno de quem fez história" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* Image Overlay Caption */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/90 to-transparent p-4">
