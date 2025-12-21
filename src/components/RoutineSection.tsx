@@ -8,6 +8,7 @@ import {
 import { Heart, Trophy, HandHeart } from "lucide-react";
 import interrepsImage from "@/assets/interreps.jpg";
 import doacaoHemocentro from "@/assets/doacao-hemocentro.jpg";
+import ressacaImage from "@/assets/ressaca.jpg";
 
 const routineItems = [
   {
@@ -32,7 +33,7 @@ const routineItems = [
     icon: Heart,
     title: "Aguentar a fofura da Ressaca",
     description: "O mascote da rep que conquista todo mundo.",
-    image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80",
+    image: ressacaImage,
   },
 ];
 
