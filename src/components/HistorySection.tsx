@@ -41,9 +41,7 @@ const HistorySection = () => {
               <p className="font-semibold text-foreground">
                 Mas, afinal, o que é morar na 12 Doses?
               </p>
-              <p>
-                Somos suspeitos para falar, mas acreditamos que é a melhor escolha da sua faculdade. Viver com mais de 20 pessoas que você não conhece pode parecer desafiador no início, mas a mágica acontece quando esses estranhos se tornam sua família longe de casa.
-              </p>
+              <p>Somos suspeitos para falar, mas acreditamos que é a melhor escolha da sua faculdade. Viver com mais de 12 pessoas que você não conhece pode parecer desafiador no início, mas a mágica acontece quando esses estranhos se tornam sua família longe de casa.</p>
               <p>Aqui, a história se renova a cada dia. Desde a ajuda nas matérias da faculdade até a parceria nas festas; de ver um filme na sala a curtir uma piscininha com churrasco. Todo momento vira resenha. É onde, entre inovações e tradições, você encontra apoio para dividir seus quatro ou cinco anos de graduação.</p>
               <p className="font-medium text-primary">
                 Na 12 Doses, mais do que morar, a gente constrói memórias. #MoreEmRep #12Doses
@@ -91,11 +89,7 @@ const HistorySection = () => {
             {/* Second Image - Churrasco de Ex-Moradores */}
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <div className="aspect-[16/9] bg-muted flex items-center justify-center">
-                <img 
-                  src={exMoradores} 
-                  alt="Churrasco de Ex-Moradores - O retorno de quem fez história" 
-                  className="w-full h-full object-cover"
-                />
+                <img src={exMoradores} alt="Churrasco de Ex-Moradores - O retorno de quem fez história" className="w-full h-full object-cover" />
               </div>
               {/* Image Overlay Caption */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/90 to-transparent p-4">
