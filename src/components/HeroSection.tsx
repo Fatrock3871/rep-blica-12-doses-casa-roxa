@@ -45,7 +45,7 @@ const HeroSection = () => {
             <a href="#aplicar">Quero ser Morador 2026</a>
           </Button>
           <Button variant="heroOutline" size="xl" asChild>
-            <a href="#tour">Fazer Tour Virtual</a>
+            <a href="#tour"> Tour Virtual</a>
           </Button>
         </div>
       </div>
