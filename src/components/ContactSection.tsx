@@ -21,7 +21,9 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-medium text-foreground">Localização</p>
-                  <p className="text-muted-foreground text-sm">Ribeirão Preto, SP - Av. Luigi Rosiello, 204 - Parque Res. Cidade Universitaria, 14051-090</p>
+                  <p className="text-muted-foreground text-sm">
+                    Ribeirão Preto, SP - Califórnia Brasileira
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
