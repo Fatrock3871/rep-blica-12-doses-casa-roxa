@@ -1,100 +1,55 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Play } from "lucide-react";
+import { Quote } from "lucide-react";
 
-interface TestimonialVideo {
+interface Testimonial {
   id: number;
   name: string;
   role: string;
-  company?: string;
-  videoUrl: string | null;
+  repYears: string;
+  quote: string;
   avatar: string | null;
 }
 
-const legacyTestimonials: TestimonialVideo[] = [
+const testimonials: Testimonial[] = [
   {
     id: 1,
     name: "Nome do Ex-Morador",
-    role: "Cargo Atual",
-    company: "Empresa",
-    videoUrl: null,
+    role: "Cargo Atual na Empresa",
+    repYears: "2018-2022",
+    quote: "A República 12 Doses foi muito mais do que uma moradia durante a faculdade. Foi onde aprendi sobre responsabilidade, amizade verdadeira e crescimento pessoal. Experiência que levo pra vida.",
     avatar: null,
   },
   {
     id: 2,
     name: "Nome do Ex-Morador",
-    role: "Cargo Atual",
-    company: "Empresa",
-    videoUrl: null,
+    role: "Cargo Atual na Empresa",
+    repYears: "2015-2019",
+    quote: "Morar na Casa Roxa me ensinou a viver em comunidade, respeitar diferenças e criar laços que duram até hoje. A rep foi fundamental na minha formação como pessoa e profissional.",
     avatar: null,
   },
   {
     id: 3,
     name: "Nome do Ex-Morador",
-    role: "Cargo Atual",
-    company: "Empresa",
-    videoUrl: null,
+    role: "Cargo Atual na Empresa",
+    repYears: "2019-2023",
+    quote: "As festas, os estudos em grupo, as madrugadas de conversa... Cada momento na 12 Doses contribuiu pra quem sou hoje. A rep é família, e família a gente nunca esquece.",
     avatar: null,
   },
 ];
 
-const currentTestimonials: TestimonialVideo[] = [
-  {
-    id: 1,
-    name: "Nome do Morador",
-    role: "Curso",
-    videoUrl: null,
-    avatar: null,
-  },
-  {
-    id: 2,
-    name: "Nome do Morador",
-    role: "Curso",
-    videoUrl: null,
-    avatar: null,
-  },
-  {
-    id: 3,
-    name: "Nome do Morador",
-    role: "Curso",
-    videoUrl: null,
-    avatar: null,
-  },
-];
-
-const VideoCard = ({ testimonial }: { testimonial: TestimonialVideo }) => (
-  <div className="bg-background rounded-2xl overflow-hidden shadow-lg border border-border hover:border-primary/30 transition-all duration-300 h-full">
-    {/* Video Player Placeholder */}
-    <div className="aspect-video bg-muted relative flex items-center justify-center group cursor-pointer">
-      {testimonial.videoUrl ? (
-        <iframe
-          src={testimonial.videoUrl}
-          className="w-full h-full"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      ) : (
-        <>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/30" />
-          <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl">
-            <Play className="w-7 h-7 text-primary-foreground ml-1" />
-          </div>
-          <span className="absolute bottom-4 left-4 text-xs text-muted-foreground bg-background/80 px-2 py-1 rounded">
-            Vídeo em breve
-          </span>
-        </>
-      )}
-    </div>
-
+const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
+  <div className="bg-card rounded-2xl shadow-lg border-2 border-primary p-6 md:p-8 flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+    {/* Quote Icon */}
+    <Quote className="w-10 h-10 text-primary mb-4 flex-shrink-0" />
+    
+    {/* Testimonial Text */}
+    <p className="text-foreground leading-relaxed flex-grow mb-6">
+      "{testimonial.quote}"
+    </p>
+    
     {/* Author Info */}
-    <div className="p-5 flex items-center gap-4">
+    <div className="flex items-center gap-4 pt-4 border-t border-border">
       {/* Avatar */}
-      <div className="w-12 h-12 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center overflow-hidden flex-shrink-0">
+      <div className="w-14 h-14 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center overflow-hidden flex-shrink-0">
         {testimonial.avatar ? (
           <img
             src={testimonial.avatar}
@@ -102,25 +57,23 @@ const VideoCard = ({ testimonial }: { testimonial: TestimonialVideo }) => (
             className="w-full h-full object-cover"
           />
         ) : (
-          <span className="text-primary font-bold text-lg">
+          <span className="text-primary font-bold text-xl">
             {testimonial.name.charAt(0)}
           </span>
         )}
       </div>
       
-      {/* Name & Role */}
+      {/* Name, Role & Rep Years */}
       <div className="min-w-0">
-        <p className="font-display font-semibold text-foreground truncate">
+        <p className="font-display font-bold text-primary text-lg">
           {testimonial.name}
         </p>
-        <p className="text-primary text-sm font-medium truncate">
+        <p className="text-muted-foreground text-sm">
           {testimonial.role}
         </p>
-        {testimonial.company && (
-          <p className="text-muted-foreground text-xs truncate">
-            {testimonial.company}
-          </p>
-        )}
+        <p className="text-primary/70 text-sm font-medium">
+          Ano de Rep: {testimonial.repYears}
+        </p>
       </div>
     </div>
   </div>
@@ -144,58 +97,12 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Legacy Carousel */}
-        <div className="mb-16">
-          <h3 className="font-display text-xl font-bold text-foreground mb-6 text-center">
-            Quem já viveu essa história
-          </h3>
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full max-w-5xl mx-auto"
-          >
-            <CarouselContent className="-ml-4">
-              {legacyTestimonials.map((testimonial) => (
-                <CarouselItem key={testimonial.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <VideoCard testimonial={testimonial} />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12" />
-            <CarouselNext className="hidden md:flex -right-12" />
-          </Carousel>
+        {/* Testimonials Grid - 3 columns on desktop, stacked on mobile */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+          {testimonials.map((testimonial) => (
+            <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+          ))}
         </div>
-
-        {/* Current Carousel */}
-        <div>
-          <h3 className="font-display text-xl font-bold text-foreground mb-6 text-center">
-            Quem vive a 12 hoje
-          </h3>
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full max-w-5xl mx-auto"
-          >
-            <CarouselContent className="-ml-4">
-              {currentTestimonials.map((testimonial) => (
-                <CarouselItem key={testimonial.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <VideoCard testimonial={testimonial} />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12" />
-            <CarouselNext className="hidden md:flex -right-12" />
-          </Carousel>
-        </div>
-
-        {/* Mobile hint */}
-        <p className="text-center text-muted-foreground text-sm mt-6 md:hidden">
-          ← Deslize para ver mais →
-        </p>
       </div>
     </section>
   );
