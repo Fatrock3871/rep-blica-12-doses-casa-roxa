@@ -1,5 +1,23 @@
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
+
 const TourSection = () => {
+  // Load TikTok embed script
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://www.tiktok.com/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      const existingScript = document.querySelector('script[src="https://www.tiktok.com/embed.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
+
   return <section id="tour" className="py-20 md:py-28 bg-muted">
       <div className="container">
         {/* Section Header */}
@@ -54,6 +72,39 @@ const TourSection = () => {
               </p>
               <p className="text-muted-foreground text-sm">{stat.label}</p>
             </div>)}
+        </div>
+
+        {/* TikTok Tour Faculdade */}
+        <div className="mt-16">
+          <div className="text-center mb-8">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
+              Tour pela Faculdade
+            </span>
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">
+              Conheça a <span className="text-primary">Faculdade de Direito</span>
+            </h3>
+          </div>
+          
+          <div className="flex justify-center px-4">
+            <blockquote 
+              className="tiktok-embed" 
+              cite="https://www.tiktok.com/@rep12doses/video/7585967568976874772" 
+              data-video-id="7585967568976874772" 
+              style={{ maxWidth: 605, minWidth: 325 }}
+            >
+              <section>
+                <a 
+                  target="_blank" 
+                  title="@rep12doses" 
+                  href="https://www.tiktok.com/@rep12doses?refer=embed"
+                  rel="noopener noreferrer"
+                >
+                  @rep12doses
+                </a>
+                <p>Tour pela Faculdade de Direito da USP! 🏛️✨</p>
+              </section>
+            </blockquote>
+          </div>
         </div>
 
         {/* Aftermovie CTA */}
