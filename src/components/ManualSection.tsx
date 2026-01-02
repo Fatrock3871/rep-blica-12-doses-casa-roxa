@@ -1,5 +1,7 @@
 import { Briefcase, Scale, Smile, BookOpen, Dumbbell, Stethoscope, MapPin } from "lucide-react";
 
+import manualDireitoVideo from "@/assets/manual-direito.mp4";
+
 const courses = [
   {
     id: 1,
@@ -14,7 +16,8 @@ const courses = [
     name: "Direito",
     faculty: "FDRP",
     icon: Scale,
-    videoId: "rOENTqFANLg",
+    videoSrc: manualDireitoVideo,
+    isVertical: true,
     description: "Tudo sobre a vida na Faculdade de Direito de Ribeirão Preto",
   },
   {
@@ -77,14 +80,24 @@ const ManualSection = () => {
               className="group relative bg-card rounded-2xl border border-border overflow-hidden hover:border-primary/30 hover:shadow-xl transition-all duration-300"
             >
               {/* Video Thumbnail */}
-              <div className="relative aspect-video bg-muted">
-                <iframe
-                  src={`https://www.youtube.com/embed/${course.videoId}`}
-                  title={`Manual dos Bixos - ${course.name}`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                />
+              <div className={`relative bg-muted ${course.isVertical ? 'aspect-[9/16]' : 'aspect-video'}`}>
+                {course.videoSrc ? (
+                  <video
+                    src={course.videoSrc}
+                    controls
+                    className="w-full h-full rounded-t-2xl object-cover"
+                  >
+                    Seu navegador não suporta vídeos.
+                  </video>
+                ) : (
+                  <iframe
+                    src={`https://www.youtube.com/embed/${course.videoId}`}
+                    title={`Manual dos Bixos - ${course.name}`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                )}
               </div>
 
               {/* Content */}
