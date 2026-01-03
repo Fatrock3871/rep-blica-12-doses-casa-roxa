@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
   {
     id: 3,
     name: "Tigrão",
-    role: "Estudante na USP",
+    role: "Student at Aarhus University and USP",
     courseYear: "Ciências da Computação • 2022",
     quote: "Ter companhia para tudo e conviver com uma diversidade de pessoas, tanto indo para festas, quanto trocando experiências profissionais e acadêmicas, é a experiência mais marcante da minha vida até o momento. Morar em república é uma grande metamorfose de vivências, e na 12 doses foi onde encontrei as melhores pessoas para me acompanhar durante essa jornada. Hoje é a minha família, que me ensina por meio de todos que já passaram e vão passar.",
     avatar: tigraoImg,
