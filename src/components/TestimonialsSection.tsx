@@ -9,14 +9,16 @@ interface Testimonial {
   avatar: string | null;
 }
 
+import balizaImg from "@/assets/baliza.jpg";
+
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Nome do Ex-Morador",
-    role: "Cargo Atual na Empresa",
-    repYears: "2018-2022",
-    quote: "A República 12 Doses foi muito mais do que uma moradia durante a faculdade. Foi onde aprendi sobre responsabilidade, amizade verdadeira e crescimento pessoal. Experiência que levo pra vida.",
-    avatar: null,
+    name: "Baliza",
+    role: "Assessor de Investimentos | XP Inc.",
+    repYears: "2018",
+    quote: "Se pudesse dar uma dica pra quem está começando, seria: Participe de tudo que a graduação tem a oferecer; Morem em Rep; Diariamente se esforcem para serem a melhor versão de vocês. Para aqueles que acabaram de ingressar na USP e pensam que já conquistaram o que podiam, saibam que é só o começo!",
+    avatar: balizaImg,
   },
   {
     id: 2,
