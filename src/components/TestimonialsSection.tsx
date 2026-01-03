@@ -4,37 +4,39 @@ interface Testimonial {
   id: number;
   name: string;
   role: string;
-  repYears: string;
+  courseYear: string;
   quote: string;
-  avatar: string | null;
+  avatar: string;
 }
 
 import balizaImg from "@/assets/baliza.jpg";
+import a4Img from "@/assets/a4.jpg";
+import tigraoImg from "@/assets/tigrao.jpg";
 
 const testimonials: Testimonial[] = [
   {
     id: 1,
     name: "Baliza",
     role: "Assessor de Investimentos | XP Inc.",
-    repYears: "2018",
+    courseYear: "Administração • 2018",
     quote: "Se pudesse dar uma dica pra quem está começando, seria: Participe de tudo que a graduação tem a oferecer; Morem em Rep; Diariamente se esforcem para serem a melhor versão de vocês. Para aqueles que acabaram de ingressar na USP e pensam que já conquistaram o que podiam, saibam que é só o começo!",
     avatar: balizaImg,
   },
   {
     id: 2,
-    name: "Nome do Ex-Morador",
-    role: "Cargo Atual na Empresa",
-    repYears: "2015-2019",
-    quote: "Morar na Casa Roxa me ensinou a viver em comunidade, respeitar diferenças e criar laços que duram até hoje. A rep foi fundamental na minha formação como pessoa e profissional.",
-    avatar: null,
+    name: "A4",
+    role: "Estudante na USP",
+    courseYear: "Finanças e Negócios • 2021",
+    quote: "Morar na 12 me ajudou muito na transição da casa dos meus pais para outra cidade. O ambiente me acolheu e me transformou como pessoa. Dividir a casa com outras pessoas te ensina muito sobre a vida e sobre relacionamentos. Realmente não trocaria essa experiência por nada! Minha segunda família.",
+    avatar: a4Img,
   },
   {
     id: 3,
-    name: "Nome do Ex-Morador",
-    role: "Cargo Atual na Empresa",
-    repYears: "2019-2023",
-    quote: "As festas, os estudos em grupo, as madrugadas de conversa... Cada momento na 12 Doses contribuiu pra quem sou hoje. A rep é família, e família a gente nunca esquece.",
-    avatar: null,
+    name: "Tigrão",
+    role: "Estudante na USP",
+    courseYear: "Ciências da Computação • 2022",
+    quote: "Ter companhia para tudo e conviver com uma diversidade de pessoas, tanto indo para festas, quanto trocando experiências profissionais e acadêmicas, é a experiência mais marcante da minha vida até o momento. Morar em república é uma grande metamorfose de vivências, e na 12 doses foi onde encontrei as melhores pessoas para me acompanhar durante essa jornada. Hoje é a minha família, que me ensina por meio de todos que já passaram e vão passar.",
+    avatar: tigraoImg,
   },
 ];
 
@@ -52,20 +54,14 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
     <div className="flex items-center gap-4 pt-4 border-t border-border">
       {/* Avatar */}
       <div className="w-14 h-14 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center overflow-hidden flex-shrink-0">
-        {testimonial.avatar ? (
-          <img
-            src={testimonial.avatar}
-            alt={testimonial.name}
-            className="w-full h-full object-cover"
-          />
-        ) : (
-          <span className="text-primary font-bold text-xl">
-            {testimonial.name.charAt(0)}
-          </span>
-        )}
+        <img
+          src={testimonial.avatar}
+          alt={testimonial.name}
+          className="w-full h-full object-cover"
+        />
       </div>
       
-      {/* Name, Role & Rep Years */}
+      {/* Name, Role & Course/Year */}
       <div className="min-w-0">
         <p className="font-display font-bold text-primary text-lg">
           {testimonial.name}
@@ -74,7 +70,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
           {testimonial.role}
         </p>
         <p className="text-primary/70 text-sm font-medium">
-          Ano de Rep: {testimonial.repYears}
+          {testimonial.courseYear}
         </p>
       </div>
     </div>
