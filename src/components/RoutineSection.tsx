@@ -9,6 +9,7 @@ import { Heart, Trophy, HandHeart } from "lucide-react";
 import interrepsImage from "@/assets/interreps.jpg";
 import doacaoHemocentro from "@/assets/doacao-hemocentro.jpg";
 import ressacaImage from "@/assets/ressaca.jpg";
+import ceferImage from "@/assets/cefer.jpg";
 
 const routineItems = [
   {
@@ -27,7 +28,7 @@ const routineItems = [
     icon: Heart,
     title: "Vida Saudável",
     description: "Saúde em dia no CEFER.",
-    image: null,
+    image: ceferImage,
   },
   {
     icon: Heart,
