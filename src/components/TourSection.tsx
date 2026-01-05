@@ -36,11 +36,11 @@ const TourSection = () => {
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
-          {[{
+        {[{
           value: "20",
           label: "Anos de História"
         }, {
-          value: "+204",
+          value: "+60",
           label: "Ex-moradores"
         }, {
           value: "12+",
