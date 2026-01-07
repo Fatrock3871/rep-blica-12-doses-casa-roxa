@@ -36,6 +36,22 @@ const ApplicationForm = () => {
           />
         </div>
         <div className="space-y-2">
+          <Label htmlFor="email" className="text-foreground font-medium">
+            E-mail
+          </Label>
+          <Input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Seu melhor e-mail"
+            required
+            maxLength={255}
+            className="h-12 bg-background border-border focus:border-primary"
+          />
+        </div>
+      </div>
+      <div className="grid sm:grid-cols-2 gap-6">
+        <div className="space-y-2">
           <Label htmlFor="curso" className="text-foreground font-medium">
             Curso
           </Label>
@@ -48,8 +64,6 @@ const ApplicationForm = () => {
             className="h-12 bg-background border-border focus:border-primary"
           />
         </div>
-      </div>
-      <div className="grid sm:grid-cols-2 gap-6">
         <div className="space-y-2">
           <Label htmlFor="cidade_origem" className="text-foreground font-medium">
             Cidade de Origem
@@ -63,19 +77,19 @@ const ApplicationForm = () => {
             className="h-12 bg-background border-border focus:border-primary"
           />
         </div>
-        <div className="space-y-2">
-          <Label htmlFor="telefone" className="text-foreground font-medium">
-            WhatsApp
-          </Label>
-          <Input
-            id="telefone"
-            name="telefone"
-            placeholder="(00) 00000-0000"
-            required
-            maxLength={20}
-            className="h-12 bg-background border-border focus:border-primary"
-          />
-        </div>
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="telefone" className="text-foreground font-medium">
+          WhatsApp
+        </Label>
+        <Input
+          id="telefone"
+          name="telefone"
+          placeholder="(00) 00000-0000"
+          required
+          maxLength={20}
+          className="h-12 bg-background border-border focus:border-primary"
+        />
       </div>
       <Button
         type="submit"

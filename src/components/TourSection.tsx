@@ -60,8 +60,8 @@ const TourSection = () => {
         <div className="text-center mt-12">
           <p className="text-muted-foreground mb-4">Quer ver um pouquinho da energia das nossas festas?</p>
           <Button variant="outline" size="lg" asChild>
-            <a href="https://youtu.be/QhNWAyakB4k?si=VWrVephSw6qz-JGw&t=1" target="_blank" rel="noopener noreferrer">
-              Aftermovie 2024
+            <a href="https://www.instagram.com/p/DKiI6OQyNld/" target="_blank" rel="noopener noreferrer">
+              Aftermovie 2025
             </a>
           </Button>
         </div>
