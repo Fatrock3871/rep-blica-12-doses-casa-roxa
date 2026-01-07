@@ -173,11 +173,11 @@ const PartiesSection = () => {
           </p>
           <Button variant="outline" size="lg" asChild>
             <a
-              href="https://youtu.be/QhNWAyakB4k?si=VWrVephSw6qz-JGw&t=1"
+              href="https://www.instagram.com/p/DKiI6OQyNld/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Aftermovie 2024
+              Aftermovie 2025
             </a>
           </Button>
         </div>
