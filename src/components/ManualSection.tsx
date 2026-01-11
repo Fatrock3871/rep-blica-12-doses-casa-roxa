@@ -1,6 +1,7 @@
 import { Briefcase, Scale, Smile, BookOpen, Dumbbell, Stethoscope, MapPin } from "lucide-react";
 
 import manualDireitoVideo from "@/assets/manual-direito.mp4";
+import tourCeferVideo from "@/assets/tour-cefer.mp4";
 
 const courses = [
   {
@@ -22,11 +23,12 @@ const courses = [
   },
   {
     id: 3,
-    name: "Odontologia",
-    faculty: "FORP",
-    icon: Smile,
-    videoId: "rOENTqFANLg",
-    description: "Guia completo para calouros de Odontologia",
+    name: "Tour no Cefer",
+    faculty: "Cefer",
+    icon: Dumbbell,
+    videoSrc: tourCeferVideo,
+    isVertical: true,
+    description: "Tudo sobre o Centro de Educação Física, Esportes e Recreação da USP",
   },
   {
     id: 4,
