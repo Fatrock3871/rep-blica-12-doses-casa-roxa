@@ -2,15 +2,17 @@ import { Briefcase, Scale, Smile, BookOpen, Dumbbell, Stethoscope, MapPin } from
 
 import manualDireitoVideo from "@/assets/manual-direito.mp4";
 import tourCeferVideo from "@/assets/tour-cefer.mp4";
+import tourFearpVideo from "@/assets/tour-fearp.mp4";
 
 const courses = [
   {
     id: 1,
-    name: "Economia & Finanças",
+    name: "Tour no FEA-RP",
     faculty: "FEA-RP",
     icon: Briefcase,
-    videoId: "rOENTqFANLg",
-    description: "Dicas para sua jornada na Faculdade de Economia e Administração",
+    videoSrc: tourFearpVideo,
+    isVertical: true,
+    description: "Tudo sobre o FEA da USP-RP",
   },
   {
     id: 2,
