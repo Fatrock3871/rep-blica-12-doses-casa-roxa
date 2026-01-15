@@ -3,6 +3,7 @@ import { Briefcase, Scale, Smile, BookOpen, Dumbbell, Stethoscope, MapPin } from
 import manualDireitoVideo from "@/assets/manual-direito.mp4";
 import tourCeferVideo from "@/assets/tour-cefer.mp4";
 import tourFearpVideo from "@/assets/tour-fearp.mp4";
+import tourEeferpVideo from "@/assets/tour-eeferp.mp4";
 
 const courses = [
   {
@@ -34,11 +35,12 @@ const courses = [
   },
   {
     id: 4,
-    name: "Educação Física",
+    name: "Tour na EEFERP",
     faculty: "EEFERP",
     icon: Dumbbell,
-    videoId: "rOENTqFANLg",
-    description: "Guia para os futuros profissionais de Ed. Física da USP-RP",
+    videoSrc: tourEeferpVideo,
+    isVertical: true,
+    description: "Tudo sobre a EEFERP da USP-RP",
   },
   {
     id: 5,
