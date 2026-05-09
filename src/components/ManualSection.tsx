@@ -1,5 +1,3 @@
-import { Briefcase, Scale, Dumbbell } from "lucide-react";
-
 import manualDireitoVideo from "@/assets/manual-direito.mp4";
 import tourCeferVideo from "@/assets/tour-cefer.mp4";
 import tourFearpVideo from "@/assets/tour-fearp.mp4";
@@ -10,7 +8,8 @@ const courses = [
     id: 1,
     name: "Tour no FEA-RP",
     faculty: "FEA-RP",
-    icon: Briefcase,
+    logoSrc: "/logos/fearp.png",
+    logoAlt: "Logo FEA-RP USP",
     videoSrc: tourFearpVideo,
     isVertical: true,
     description: "Tudo sobre o FEA da USP-RP",
@@ -19,7 +18,8 @@ const courses = [
     id: 2,
     name: "Direito",
     faculty: "FDRP",
-    icon: Scale,
+    logoSrc: "/logos/fdrp.png",
+    logoAlt: "Logo FDRP USP",
     videoSrc: manualDireitoVideo,
     isVertical: true,
     description: "Tudo sobre a vida na Faculdade de Direito de Ribeirão Preto",
@@ -28,7 +28,8 @@ const courses = [
     id: 3,
     name: "Tour no Cefer",
     faculty: "Cefer",
-    icon: Dumbbell,
+    logoSrc: "/logos/cefer.png",
+    logoAlt: "Logo CEFER USP",
     videoSrc: tourCeferVideo,
     isVertical: true,
     description: "Tudo sobre o Centro de Educação Física, Esportes e Recreação da USP",
@@ -37,7 +38,8 @@ const courses = [
     id: 4,
     name: "Tour na EEFERP",
     faculty: "EEFERP",
-    icon: Dumbbell,
+    logoSrc: "/logos/eeferp.png",
+    logoAlt: "Logo EEFERP USP",
     videoSrc: tourEeferpVideo,
     isVertical: true,
     description: "Tudo sobre a EEFERP da USP-RP",
@@ -83,8 +85,12 @@ const ManualSection = () => {
               {/* Content */}
               <div className="p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
-                    <course.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+                  <div className="w-14 h-14 rounded-xl bg-transparent flex items-center justify-center shrink-0 overflow-hidden">
+                    <img
+                      src={course.logoSrc}
+                      alt={course.logoAlt}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <div>
                     <h3 className="font-display font-bold text-lg text-foreground mb-1">
