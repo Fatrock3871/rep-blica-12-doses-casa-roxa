@@ -42,22 +42,6 @@ const courses = [
     isVertical: true,
     description: "Tudo sobre a EEFERP da USP-RP",
   },
-  {
-    id: 5,
-    name: "Medicina",
-    faculty: "FMRP",
-    icon: Stethoscope,
-    videoId: "rOENTqFANLg",
-    description: "Dicas e orientações para calouros da Medicina",
-  },
-  {
-    id: 6,
-    name: "Tour Outras Faculdades",
-    faculty: "USP-RP",
-    icon: MapPin,
-    videoId: "rOENTqFANLg",
-    description: "Psicologia, Nutrição e mais - conheça o campus completo",
-  },
 ];
 
 const ManualSection = () => {
