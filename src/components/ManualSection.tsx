@@ -2,13 +2,14 @@ import manualDireitoVideo from "@/assets/manual-direito.mp4";
 import tourCeferVideo from "@/assets/tour-cefer.mp4";
 import tourFearpVideo from "@/assets/tour-fearp.mp4";
 import tourEeferpVideo from "@/assets/tour-eeferp.mp4";
+import logoFearp from "@/assets/logo-fearp.jpg";
 
 const courses = [
   {
     id: 1,
     name: "Tour no FEA-RP",
     faculty: "FEA-RP",
-    logoSrc: "/logos/fearp.png",
+    logoSrc: logoFearp,
     logoAlt: "Logo FEA-RP USP",
     videoSrc: tourFearpVideo,
     isVertical: true,
