@@ -1,4 +1,4 @@
-import { Briefcase, Scale, Smile, BookOpen, Dumbbell, Stethoscope, MapPin } from "lucide-react";
+import { Briefcase, Scale, Dumbbell } from "lucide-react";
 
 import manualDireitoVideo from "@/assets/manual-direito.mp4";
 import tourCeferVideo from "@/assets/tour-cefer.mp4";
@@ -42,22 +42,6 @@ const courses = [
     isVertical: true,
     description: "Tudo sobre a EEFERP da USP-RP",
   },
-  {
-    id: 5,
-    name: "Medicina",
-    faculty: "FMRP",
-    icon: Stethoscope,
-    videoId: "rOENTqFANLg",
-    description: "Dicas e orientações para calouros da Medicina",
-  },
-  {
-    id: 6,
-    name: "Tour Outras Faculdades",
-    faculty: "USP-RP",
-    icon: MapPin,
-    videoId: "rOENTqFANLg",
-    description: "Psicologia, Nutrição e mais - conheça o campus completo",
-  },
 ];
 
 const ManualSection = () => {
@@ -86,24 +70,14 @@ const ManualSection = () => {
               className="group relative bg-card rounded-2xl border border-border overflow-hidden hover:border-primary/30 hover:shadow-xl transition-all duration-300"
             >
               {/* Video Thumbnail */}
-              <div className={`relative bg-muted ${course.isVertical ? 'aspect-[9/16]' : 'aspect-video'}`}>
-                {course.videoSrc ? (
-                  <video
-                    src={course.videoSrc}
-                    controls
-                    className="w-full h-full rounded-t-2xl object-cover"
-                  >
-                    Seu navegador não suporta vídeos.
-                  </video>
-                ) : (
-                  <iframe
-                    src={`https://www.youtube.com/embed/${course.videoId}`}
-                    title={`Manual dos Bixos - ${course.name}`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
-                )}
+              <div className="relative bg-muted aspect-[9/16]">
+                <video
+                  src={course.videoSrc}
+                  controls
+                  className="w-full h-full rounded-t-2xl object-cover"
+                >
+                  Seu navegador não suporta vídeos.
+                </video>
               </div>
 
               {/* Content */}
