@@ -5,6 +5,7 @@ import tourEeferpVideo from "@/assets/tour-eeferp.mp4";
 import logoFearp from "@/assets/logo-fearp.jpg";
 import logoFdrp from "@/assets/logo-fdrp.png";
 import logoCefer from "@/assets/logo-cefer.png";
+import logoEeferp from "@/assets/logo-eeferp.jpg";
 
 const courses = [
   {
@@ -41,7 +42,7 @@ const courses = [
     id: 4,
     name: "Tour na EEFERP",
     faculty: "EEFERP",
-    logoSrc: "/logos/eeferp.png",
+    logoSrc: logoEeferp,
     logoAlt: "Logo EEFERP USP",
     videoSrc: tourEeferpVideo,
     isVertical: true,
