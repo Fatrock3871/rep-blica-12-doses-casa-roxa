@@ -3,6 +3,7 @@ import tourCeferVideo from "@/assets/tour-cefer.mp4";
 import tourFearpVideo from "@/assets/tour-fearp.mp4";
 import tourEeferpVideo from "@/assets/tour-eeferp.mp4";
 import logoFearp from "@/assets/logo-fearp.jpg";
+import logoFdrp from "@/assets/logo-fdrp.png";
 
 const courses = [
   {
@@ -19,7 +20,7 @@ const courses = [
     id: 2,
     name: "Direito",
     faculty: "FDRP",
-    logoSrc: "/logos/fdrp.png",
+    logoSrc: logoFdrp,
     logoAlt: "Logo FDRP USP",
     videoSrc: manualDireitoVideo,
     isVertical: true,
